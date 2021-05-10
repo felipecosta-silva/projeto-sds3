@@ -24,13 +24,13 @@ const DataTable = () => {
       })
   }, [activePage]);
 
-  const chanegePage = (index: number) => {
+  const changePage = (index: number) => {
     setActivePage(index);
   }
 
   return (
     <>
-      <Pagination page={page} onPageChange={chanegePage} />
+      <Pagination page={page} onPageChange={changePage} />
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
