@@ -57,8 +57,17 @@ const BarChart = () => {
     plotOptions: {
       bar: {
         horizontal: true,
-      }
+        borderRadius: 4,
+      },
+      dataLabels: {
+        style: {
+          fontSize: '12px',
+        }
+      },
     },
+    fill: {
+      colors: ['#9C27B0']
+    }
   };
 
   return (
@@ -70,5 +79,7 @@ const BarChart = () => {
     />
   );
 }
+
+
 
 export default BarChart;

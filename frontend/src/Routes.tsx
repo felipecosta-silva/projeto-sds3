@@ -1,5 +1,7 @@
+import AddSale from 'pages/AddSale';
 import Dashboard from 'pages/Dashboard';
 import Home from 'pages/Home';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function Routes() {
@@ -11,6 +13,9 @@ function Routes() {
                 </Route>
                 <Route path="/dashboard">
                     <Dashboard />
+                </Route>
+                <Route path="/addsale">
+                    <AddSale />
                 </Route>
             </Switch>
         </BrowserRouter>

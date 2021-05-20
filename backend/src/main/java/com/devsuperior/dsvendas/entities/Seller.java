@@ -26,9 +26,6 @@ public class Seller {
 		return Sales;
 	}
 
-	public Seller () {
-		
-	}
 
 	public Seller(Long id, String name) {
 		super();

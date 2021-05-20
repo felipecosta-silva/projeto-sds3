@@ -5,17 +5,16 @@ import { SalePage } from "types/sale";
 import { formatLocalDate } from "utils/format";
 import { BASE_URL } from "utils/requests";
 
-
-
 const DataTable = () => {
 
   const [activePage, setActivePage] = useState(0);
+
   const [page, setPage] = useState<SalePage>({
     first: true,
     last: true,
-    number: 0,
     totalElements: 0,
-    totalPages: 0
+    totalPages: 0,
+    number: 0
   });
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const DataTable = () => {
     <>
       <Pagination page={page} onPageChange={changePage} />
       <div className="table-responsive">
-        <table className="table table-striped table-sm">
+        <table className="table table-dark table-hover table-sm">
           <thead>
             <tr>
               <th>Data</th>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { SalePage } from "types/sale";
 
 type Props = {
@@ -9,17 +10,18 @@ const Pagination = ({ page, onPageChange }: Props) => {
 
   return (
     <div className="d-flex justify-content-center">
-      <nav>
+      <nav aria-label="Page navigation example">
         <ul className="pagination">
           <li className={`page-item ${page.first ? 'disabled' : ''}`}>
-            <button className="page-link" onClick={() => onPageChange(page.number - 1)}>Anterior</button>
-          </li>
-          <li className="page-item disabled">
-            <span className="page-link">{page.number + 1}</span>
-          </li>
+            <a className="page-link" onClick={() => onPageChange(page.number - 1)}>Anterior</a></li>
+          <li className={`page-item ${page.first ? 'disabled' : ''}`}>
+            <a className="page-link">{page.number}</a></li>
+          <li className="page-item active">
+            <a className="page-link">{page.number + 1}</a></li>
           <li className={`page-item ${page.last ? 'disabled' : ''}`}>
-            <button className="page-link" onClick={() => onPageChange(page.number + 1)}>Próxima</button>
-          </li>
+            <a className="page-link">{page.number + 2}</a></li>
+          <li className={`page-item ${page.last ? 'disabled' : ''}`}>
+            <a className="page-link" onClick={() => onPageChange(page.number + 1)}>Próxima</a></li>
         </ul>
       </nav>
     </div>
