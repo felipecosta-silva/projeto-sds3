@@ -29,23 +29,17 @@ public interface SaleRepository extends JpaRepository<Sale, Long>{
 			+ "SUM(obj.deals)) "
 			+ "FROM Sale AS obj GROUP BY obj.seller")
 	List<SaleSuccessDTO> successGroupeBySeller();
-	
-	@Query("INSERT INTO tb_sales("
-			+ "seller, "
-			+ "visited),"
-			+ "deals,"
-			+ "amount,"
-			+ " date)) "
-			+ "VALUES (,"
-			+ "")
+
 	SaleDTO save();
+
+
 	
-	@Query("SELECT "
-			+ "new com.devsuperior.dsvendas.dto.SaleDTO("
-			+ "obj.seller, "
-			+ "SUM(obj.visited),"
-			+ "SUM(obj.deals)) "
-			+ "FROM Sale AS obj "
-			+ "where obj.id = ")
-	SaleDTO findById(long id);
+	/*
+	 * @Query("INSERT INTO tb_sales(" + "seller, " + "visited)," + "deals," +
+	 * "amount," + " date)) " + "VALUES (," + "") SaleDTO save();
+	 * 
+	 * @Query("SELECT " + "new com.devsuperior.dsvendas.dto.SaleDTO(" +
+	 * "obj.seller, " + "SUM(obj.visited)," + "SUM(obj.deals)) " +
+	 * "FROM Sale AS obj " + "where obj.id = id") SaleDTO findById(long id);
+	 */
 }

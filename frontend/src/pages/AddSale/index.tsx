@@ -1,7 +1,6 @@
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 import { Link } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa";
 
 
 const AddSale = () => {
@@ -12,14 +11,14 @@ const AddSale = () => {
       <div className="container">
         <div className="jumbotron">
           <h1 className="display-4">
-            <Link className="" to="/dashboard">
-              <FaArrowLeft />
-            </Link>
             Add Sale
           </h1>
           <hr />
-          <Link className="btn btn-primary btn-lg" to="/dashboard">
+          <Link className="btn btn-primary mr-5 btn-lg" to="/dashboard">
             Salvar
+          </Link>
+          <Link className="btn btn-danger btn-lg" to="/dashboard">
+            Cancel
           </Link>
         </div>
       </div>

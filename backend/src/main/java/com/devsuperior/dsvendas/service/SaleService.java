@@ -48,9 +48,4 @@ public class SaleService {
 		 return repository.save(); 
 	}
 
-	public SaleDTO findById(long id) {
-		return repository.findById(id);
-	}
-	 
-
 }

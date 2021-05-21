@@ -25,6 +25,9 @@ public class Seller {
 	public List<Sale> getSales() {
 		return Sales;
 	}
+	
+	public Seller () {
+	}
 
 
 	public Seller(Long id, String name) {
